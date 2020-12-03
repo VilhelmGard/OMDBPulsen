@@ -25,14 +25,13 @@ namespace OMDB_API.Controllers
                     req.MovieTitle.Replace(" ", "+"),
                     req.MovieYear,
                     req.MoviePlot,
-                    contentType.Replace("application/", "")));
+                    contentType));
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, 
                     ex.InnerException.ToString());
             }
-
         }
         // GET: api/OMDB/param?movieTitle={title}&movieYear={year}&moviePlot={plot}
         [HttpGet("param")]
@@ -50,14 +49,13 @@ namespace OMDB_API.Controllers
                     movieTitle,
                     movieYear,
                     moviePlot,
-                    contentType.Replace("application/", "")));
+                    contentType));
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, 
                     ex.InnerException.ToString());
             }
-
         }
     }
 }

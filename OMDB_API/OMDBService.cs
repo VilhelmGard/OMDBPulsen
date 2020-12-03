@@ -26,7 +26,7 @@ namespace OMDB_API
                     movieTitle, 
                     movieYear,
                     moviePlot.ToString(),
-                    dataType);
+                    dataType.Replace("application/", ""));
 
                 RestClient client = new RestClient(url);
 
