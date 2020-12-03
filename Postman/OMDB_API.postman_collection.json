@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "1ae41836-dc8b-406c-958c-c33c9fede654",
+		"name": "OMDB_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OMDB_API_POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MovieTitle\": \"Inglourious Basterds\",\r\n\"MovieYear\": 2009,\r\n\"MoviePlot\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44318/api/OMDB",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44318",
+					"path": [
+						"api",
+						"OMDB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OMDB_API GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/OMDB/?movieTitle=star+wars&movieYear=1977&moviePlot=0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OMDB",
+						""
+					],
+					"query": [
+						{
+							"key": "movieTitle",
+							"value": "star+wars"
+						},
+						{
+							"key": "movieYear",
+							"value": "1977"
+						},
+						{
+							"key": "moviePlot",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OMDB_API_Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
